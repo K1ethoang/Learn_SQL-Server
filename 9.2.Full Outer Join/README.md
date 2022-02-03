@@ -1,4 +1,4 @@
-# Inner Join
+# Full Outer Join
 
 - Trả về những dữ liệu thoả điều kiện và những dữ liệu không thoả dữ liệu (xem hình bên dưới).
 - Mọi join đều cần có điều kiện.
