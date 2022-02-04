@@ -13,6 +13,10 @@ WHERE HOTEN LIKE '%n'
 SELECT * FROM dbo.GIAOVIEN
 WHERE HOTEN LIKE '%m%'
 
--- xuất ra thông tin gv có tồn tại chữ ế
+-- Xuất ra thông tin giáo viên mà tên có tồn tại chữ iế và có độ dài ít nhất 4 ký tự
 SELECT * FROM dbo.GIAOVIEN
-WHERE HOTEN LIKE N'%ế%'
+WHERE HOTEN LIKE N'_%iế%_'
+
+-- Xuất ra thông tin của giáo viên mà tên bắt đầu bằng chữ Tr và kết thúc bằng chữ ng
+SELECT * FROM dbo.GIAOVIEN
+WHERE HOTEN LIKE 'Tr%ng'
