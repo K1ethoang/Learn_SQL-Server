@@ -3,10 +3,10 @@
 - Gộp 2 bảng thành 1 bảng
 - Record nào thiếu thì thôi, nếu giống thì chỉ lấy 1
 - Có thể cho thêm điều kiện
-- [Example](https://github.com/K1ethoang/SQL-Server/blob/main/10.Union/union.sql)
+- [Example](https://github.com/K1ethoang/SQL-Server/blob/main/9.4.Union/union.sql)
   <br>
 
-![Full Outer Join](https://github.com/K1ethoang/SQL-Server/blob/main/image/10.Union/sql-union.png)
+![Full Outer Join](https://github.com/K1ethoang/SQL-Server/blob/main/9.4.Union/image/sql-union.png)
 
 # 2. Syntax
 
