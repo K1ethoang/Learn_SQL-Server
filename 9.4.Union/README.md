@@ -6,7 +6,7 @@
 - [Example](https://github.com/K1ethoang/SQL-Server/blob/main/9.4.Union/union.sql)
   <br>
 
-![Full Outer Join](https://github.com/K1ethoang/SQL-Server/blob/main/9.4.Union/image/sql-union.png)
+![Union](https://github.com/K1ethoang/SQL-Server/blob/main/9.4.Union/image/sql-union.png)
 
 # 2. Syntax
 
