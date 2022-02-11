@@ -7,7 +7,7 @@
 
 |Hình|
 |:---:|
-|![view](link)|
+|![view](https://github.com/K1ethoang/SQL-Server/blob/main/14.View/image/sql-view.png)|
 
 # 2. Syntax
 
