@@ -38,4 +38,6 @@ WHERE <column> LIKE <dữ liệu mẫu>
   |Tìm kiếm dữ liêu có ký tự `K` ở `vị trí thứ hai`|…WHERE `<column>` LIKE `'%_K%'`|
   |Tìm kiếm dữ liệu bắt đầu bằng ký tự `K`, và có ít nhất có `chiều dài` là `3 ký tự`|…WHERE `<column>` LIKE `'K_%_%'`|
   |Tìm kiếm dữ liệu `bắt đầu` bằng ký tự `K`, `kết thúc` bằng ký tự `m`|…WHERE `<column>` LIKE `'K%m'`|
-  |Tìm kiếm dữ liệu 'bắt đầu` bằng kí tự `a` hoặc `s` hoặc `c`|...WHERE `<column>` LIKE `'[asc]%'`
+  |Tìm kiếm dữ liệu `bắt đầu` bằng kí tự `a` hoặc `s` hoặc `c`|...WHERE `<column>` LIKE `'[asc]%'`|
+  |Tìm kiếm dữ liệu `bắt đầu` bằng bất kì - `mở đầu` `a` `kết thúc` `s`|...WHERE `<column>` LIKE `'[a-s]%'`|
+  |Tìm kiếm dữ liệu `KHÔNG bắt đầu` bằng kí tự `a` hoặc `s` hoặc `c`|...WHERE `<column>` LIKE `'[!asc]%'`|
