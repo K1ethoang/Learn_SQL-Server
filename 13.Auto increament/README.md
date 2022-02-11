@@ -1,6 +1,6 @@
 # 1. Auto Increament
 - Xem code để hiểu rõ hơn
-- [Code](link)
+- [Code](https://github.com/K1ethoang/SQL-Server/blob/main/13.Auto%20increament/auto%20increament.sql)
 
 # 2. Syntax
 
