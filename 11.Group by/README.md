@@ -1,7 +1,11 @@
 # 1. Group By
 
 - Xem code để hiểu rõ hơn
-- [Code](link)
+- [Code](https://github.com/K1ethoang/SQL-Server/blob/main/11.Group%20by/group%20by.sql)
+
+|Hình|
+|:---:|
+|![Group By](https://github.com/K1ethoang/SQL-Server/blob/main/11.Group%20by/image/sql-group-by.jpg)|
 
 # 2. Syntax
 
@@ -40,11 +44,11 @@ GROUP BY <trường cần group>
 | `RTRIM()`             |
 | `UPPER()`/`UCASE()`   |                   Converts character data to upper case (viết in hoa)                    |
 
-# 4. Bài tập
+# 5. Bài tập
 
 1. xuất ra tên giáo viên và số lượng người thân của giáo viên đó
 2. Xuất ra tên giáo viên và số lượng đề tài đã hoàn thành mà giáo viên đó đã tham gia
 3. xuất ra tên khoa có tổng số lương của giáo viên trong khoa là lớn nhất
    <br>
 
-[lời giải](link)
+[lời giải](https://github.com/K1ethoang/SQL-Server/blob/main/11.Group%20by/group%20by.sql)
