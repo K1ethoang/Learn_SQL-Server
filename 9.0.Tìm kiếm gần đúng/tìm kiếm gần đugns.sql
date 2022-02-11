@@ -20,3 +20,7 @@ WHERE HOTEN LIKE N'_%iế%_'
 -- Xuất ra thông tin của giáo viên mà tên bắt đầu bằng chữ Tr và kết thúc bằng chữ ng
 SELECT * FROM dbo.GIAOVIEN
 WHERE HOTEN LIKE 'Tr%ng'
+
+-- Xuất ra thông tin của giáo viên mà tên bắt đầu bằng chữ T hoặc A hoặc N
+SELECT * FROM dbo.GIAOVIEN
+WHERE HOTEN LIKE '[TAN]%'
