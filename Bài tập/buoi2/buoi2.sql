@@ -1,10 +1,4 @@
-﻿/*
-
-
-
-*/
-
-CREATE DATABASE buoi2
+﻿CREATE DATABASE buoi2
 GO
 
 USE	buoi2
@@ -25,7 +19,7 @@ CREATE TABLE KhachHang
 	PRIMARY KEY(ma,sdt)
 )
 
--- 1. Thêm 5 khách hàng 
+-- 1. Thêm 5 khách hàng
 INSERT INTO dbo.KhachHang -- 1
 VALUES
 (   123,       -- ma - char(10)
@@ -87,9 +81,17 @@ SELECT * FROM dbo.KhachHang
 WHERE YEAR(GETDATE()) - YEAR(ngaySinh) > 18
 
 -- 8. (**) Lấy ra 3 khách hàng mới nhất
+SELECT TOP 3 * FROM KhachHang
+ORDER BY ma DESC
 
 -- 9. (**) Lấy ra khách hàng có tên chứa chữ T
 SELECT * FROM dbo.KhachHang
 WHERE hoTen LIKE N'%T%'
 
 -- 10. (***) Thay đổi bảng sao cho chỉ nhập được ngày sinh bé hơn ngày hiện tại
+ALTER TABLE KhachHang
+ADD CHECK(ngaySinh < GETDATE()) -- check() -> độc lập với cột
+
+-- (***) Thay đổi bảng sao cho chỉ nhập được giới tính nam với bạn tên Kiệt hoặc khác tên Kiệt
+ALTER TABLE KhachHang
+ADD CONSTRAINT CK_gioi_tinh_kem_ten_kiet CHECK((gioiTinh = 1 AND hoTen = N'Kiệt') OR hoTen != N'Kiệt')
