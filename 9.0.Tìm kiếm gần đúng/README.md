@@ -32,9 +32,10 @@ WHERE <column> LIKE <dữ liệu mẫu>
  # 2. Một số dạng tìm kiếm gần đúng
   |Dạng tìm kiếm|Mệnh đề WHERE|
   |:---:|:---:|
-  |Tìm kiếm dữ liệu bắt đầu bằng ký tự `K`|…WHERE `<column>` LIKE `‘K%’`|
-  |Tìm kiếm dữ liệu kết thúc bằng ký tự `K`|…WHERE `<column>` LIKE `‘%K’`|
-  |Tìm kiếm dữ liệu có chứa ký tự `Kt` ở vị trí bất kỳ|…WHERE `<column>` LIKE `‘%Kt%’`|
-  |Tìm kiếm dữ liêu có ký tự `K` ở `vị trí thứ hai`|…WHERE `<column>` LIKE `‘%_K%’`|
-  |Tìm kiếm dữ liệu bắt đầu bằng ký tự `K`, và có ít nhất có `chiều dài` là `3 ký tự`|…WHERE `<column>` LIKE `‘K_%_%’`|
-  |Tìm kiếm dữ liệu `bắt đầu` bằng ký tự `K`, `kết thúc` bằng ký tự `m`|…WHERE `<column>` LIKE `‘K%m’`|
+  |Tìm kiếm dữ liệu bắt đầu bằng ký tự `K`|…WHERE `<column>` LIKE `'K%'`|
+  |Tìm kiếm dữ liệu kết thúc bằng ký tự `K`|…WHERE `<column>` LIKE `'%K'`|
+  |Tìm kiếm dữ liệu có chứa ký tự `Kt` ở vị trí bất kỳ|…WHERE `<column>` LIKE `'%Kt%'`|
+  |Tìm kiếm dữ liêu có ký tự `K` ở `vị trí thứ hai`|…WHERE `<column>` LIKE `'%_K%'`|
+  |Tìm kiếm dữ liệu bắt đầu bằng ký tự `K`, và có ít nhất có `chiều dài` là `3 ký tự`|…WHERE `<column>` LIKE `'K_%_%'`|
+  |Tìm kiếm dữ liệu `bắt đầu` bằng ký tự `K`, `kết thúc` bằng ký tự `m`|…WHERE `<column>` LIKE `'K%m'`|
+  |Tìm kiếm dữ liệu 'bắt đầu` bằng kí tự `a` hoặc `s` hoặc `c`|...WHERE `<column>` LIKE `'[asc]%'`
