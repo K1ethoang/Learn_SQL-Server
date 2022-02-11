@@ -45,12 +45,19 @@ ORDER BY MAGV ASC
 SELECT TOP(5) * FROM dbo.GIAOVIEN
 
 --								Giải bài tập
--- 1. Xuất ra thông tin giáo viên mà có hơn 2 người thân
+-- 1. Xuất ra thông tin giáo viên mà có hơn 1 người thân
+SELECT GV.* FROM dbo.GIAOVIEN GV
+WHERE 1 <
+(
+	SELECT COUNT(*) FROM dbo.NGUOITHAN NT
+	WHERE GV.MAGV = NT.MAGV
+)
+
 
 -- 2. Xuất ra danh sách các giáo viên lớn tuổi hơn ít nhất 5 giáo viên trong trường
 /*- Gợi ý:
 	- Lấy ra danh sách (MaGV, Tuoi) as GVT1
-	- Sắp xếp giảm dần
+	- Sắp xếp tăng dần
 	- Lấy ra danh sách GVT2 với số lượng phần tử = 5
 	- Kiểm tra mã giáo viên tồn tại trong GVT2 là đúng
 */

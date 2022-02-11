@@ -3,7 +3,7 @@
 - [Code](https://github.com/K1ethoang/SQL-Server/blob/main/10.Truy%20v%E1%BA%A5n%20l%E1%BB%93ng/truy%20v%E1%BA%A5n%20l%E1%BB%93ng.sql)
 
 # Bài tập
-1. Xuất ra thông tin giáo viên mà có hơn 2 người thân
+1. Xuất ra thông tin giáo viên mà có hơn 1 người thân
 2. Xuất ra danh sách các giáo viên lớn tuổi hơn ít nhất 5 giáo viên trong trường
 - Gợi ý:
   - Lấy ra danh sách (MaGV, Tuoi) as GVT1
