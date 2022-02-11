@@ -66,3 +66,7 @@ WHERE GV.MAGV = TGDT.MAGV AND TGDT.KETQUA = N'Đạt'
 GROUP BY GV.MAGV, GV.HOTEN
 
 -- 3. xuất ra tên khoa có tổng số lương của giáo viên trong khoa là lớn nhất
+SELECT TOP (1) k.TENKHOA, SUM(gv.LUONG) AS N'Tổng lương' FROM dbo.KHOA k, dbo.BOMON bm, dbo.GIAOVIEN gv
+	WHERE gv.MABM = bm.MABM AND bm.MAKHOA = k.MAKHOA
+	GROUP BY k.TENKHOA, k.MAKHOA
+	ORDER BY [Tổng lương] DESC
