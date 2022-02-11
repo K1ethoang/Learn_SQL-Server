@@ -1,4 +1,8 @@
-# 1. Syntax
+# 1. Tìm kiếm gần đúng
+- Xem code để hiểu rõ hơn
+- [Code](https://github.com/K1ethoang/SQL-Server/blob/main/9.0.T%C3%ACm%20ki%E1%BA%BFm%20g%E1%BA%A7n%20%C4%91%C3%BAng/t%C3%ACm%20ki%E1%BA%BFm%20g%E1%BA%A7n%20%C4%91ugns.sql)
+
+# 2. Syntax
 ```sql
 SELECT [tính chất] <danh sách column>
 FROM <danh sách Table/Query>
