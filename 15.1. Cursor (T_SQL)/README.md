@@ -2,7 +2,7 @@
 - **Tác dụng**: Khi có nhu cầu duyệt từng record của bảng, với mỗi record có kết quả xử lý riêng thì dùng cursor
 - Nếu đã code C/C++ thì qua đây thì tư duy vẫn vậy, chỉ khác cú pháp
 - Bên SQL gọi là Cursor thay vì Pointer 🍦
-- [Code](link)
+- [Code](https://github.com/K1ethoang/SQL-Server/blob/main/15.1.%20Cursor%20(T_SQL)/cursor.sql)
   
 |Hình|
 |:---:|
