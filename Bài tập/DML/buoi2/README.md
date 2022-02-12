@@ -13,4 +13,4 @@ Tạo bảng lưu thông tin khách hàng (mã, họ tên, số điện thoại,
 10. (***) Thay đổi bảng sao cho chỉ nhập được ngày sinh bé hơn ngày hiện tại
 <br>
 
-[Lời giải](https://github.com/K1ethoang/SQL-Server/blob/main/B%C3%A0i%20t%E1%BA%ADp/buoi2/buoi2.sql)
+[Lời giải](https://github.com/K1ethoang/SQL-Server/blob/main/B%C3%A0i%20t%E1%BA%ADp/DML/buoi2/buoi2.sql)
