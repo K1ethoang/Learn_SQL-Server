@@ -5,7 +5,7 @@ GO
 CREATE TABLE testCheck
 (
 	id INT CONSTRAINT CK_id PRIMARY KEY IDENTITY CHECK(id <= 10),
-	luong INT CONSTRAINT CK_luong	CHECK (luong > 3000 AND luong < 9000)
+	luong INT CONSTRAINT CK_luong CHECK (luong > 3000 AND luong < 9000)
 )
 GO 
 
@@ -22,7 +22,7 @@ CREATE TABLE testCheck2
 (
 	id INT CONSTRAINT CK_id2 PRIMARY KEY IDENTITY CHECK(id <= 10),
 	luong INT,
-	CONSTRAINT CK_luong	CHECK2 (luong > 3000 AND luong < 9000)
+	CONSTRAINT CK_luong2 CHECK (luong > 3000 AND luong < 9000)
 )
 GO
 
@@ -34,7 +34,7 @@ CREATE TABLE testCheck3
 )
 
 ALTER TABLE dbo.testCheck3
-ADD CONSTRAINT CK_luong3	CHECK (luong > 3000 AND luong < 9000)
+ADD CONSTRAINT CK_luong3 CHECK (luong > 3000 AND luong < 9000)
 */
 
 -- xoá bảng
