@@ -1,8 +1,13 @@
 # 1. View
-- View là bảng ảo
-- Cập nhật dữ liệu theo bảng mà view truy vấn tới mỗi khi lấy view ra sài
-- View được tạo từ 1 truy vấn
-- Xem code để hiểu rõ hơn
+- Tác dụng: 
+  - Không phải viết lại câu lệnh query
+  - Máy chạy nhanh hơn vì đã biên dịch câu lệnh
+  - Truyền câu lệnh lên server nhanh (vì nó gọn)
+  - Bảo mật hơn
+- Thông tin khác: 
+  - View là bảng ảo
+  - Cập nhật dữ liệu theo bảng mà view truy vấn tới mỗi khi lấy view ra sài
+  - View được tạo từ 1 truy vấn
 - [Code](https://github.com/K1ethoang/SQL-Server/blob/main/14.View/view.sql)
 
 |Hình|
