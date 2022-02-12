@@ -32,7 +32,7 @@ DROP INDEX table_name.index_name;
 CREATE CLUSTERED INDEX <index_name>
 ON <table_name> (<column_list>)
 ```
-## 2.2. Clustered Index
+## 2.2.Non-Clustered Index
 ```sql
 CREATE NONCLUSTERED INDEX <index_name>
 ON <table_name> (<column_list>)
