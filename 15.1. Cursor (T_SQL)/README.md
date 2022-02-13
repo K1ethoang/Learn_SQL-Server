@@ -19,7 +19,7 @@ FOR <câu lệnh select>
 OPEN <tên con trỏ>
 ```
 
-## 2. Mở con trỏ
+## 3. Duyệt qua phần tử
 ```sql
 FETCH NEXT FROM <tên con trỏ> INTO <danh sách biến>
 ```
