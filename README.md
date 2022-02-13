@@ -1,4 +1,13 @@
 # SQL-Server
+- [SQL-Server](#sql-server)
+- [Vài lời muốn nói](#vài-lời-muốn-nói)
+- [Lưu ý 🍦](#lưu-ý-)
+- [Tài liệu tham khảo 🍦](#tài-liệu-tham-khảo-)
+- [Tips 🍦](#tips-)
+	- [1. Comment nhiều dòng](#1-comment-nhiều-dòng)
+	- [2. Hiển thị số dòng](#2-hiển-thị-số-dòng)
+- [License](#license)
+# Vài lời muốn nói
 - Đây là nơi lưu trữ kiến thức trong lúc mình học ^^ 
 - Nếu bạn cần và thấy có ích thì cứ việc tham khảo thoải mái nhé :3
 ```
@@ -9,7 +18,7 @@ Sau này sẽ có những lỗi sai mà bạn phải trả giá đắt nếu kh�
 - Nếu thấy hữu ích thì cho mình ⭐ nha
 
 # Lưu ý 🍦
-- Cần chạy script này trước để có database mà học
+**Cần chạy script này trước để có database mà học**
 <details><summary>Script</summary>
 
 ```sql
