@@ -1,4 +1,13 @@
 # SQL-Server
+- Đây là nơi lưu trữ kiến thức trong lúc mình học ^^ 
+- Nếu bạn cần và thấy có ích thì cứ việc tham khảo thoải mái nhé :3
+```
+            Lúc học thì cứ sai nhiều vào rồi sửa
+Sau này sẽ có những lỗi sai mà bạn phải trả giá đắt nếu không biết đấy
+                                                         - K1ethoang -
+```
+- Nếu thấy hữu ích thì cho mình ⭐ nha
+
 # Lưu ý 🍦
 - Cần chạy script này trước để có database mà học
 <details><summary>Script</summary>
@@ -430,3 +439,5 @@
 ## 2. Hiển thị số dòng
 - `Tools` -> `Options` -> `Text Editor` > `Transact-SQL` > `General` -> `Display` -> `Line Numbers` -> `Ok`
 
+# License
+[MIT](LICENSE)
