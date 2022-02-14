@@ -1,97 +1,55 @@
-﻿CREATE DATABASE buoi2
+﻿CREATE DATABASE buoi3
 GO
 
-USE	buoi2
+USE buoi3
 GO
 
-DROP TABLE dbo.KhachHang
--- Tạo bảng lưu thông tin khách hàng (mã, họ tên, số điện thoại, địa chỉ, giới tính, ngày sinh)
-CREATE TABLE KhachHang
+--- Tạo bảng lưu thông tin điểm của sinh viên (mã, họ tên, điểm lần 1, điểm lần 2)
+--- Với điều kiện:
+--	- điểm không được phép nhỏ hơn 0 và lớn hơn 10
+--	- điểm lần 1 nếu không nhập mặc định sẽ là 5
+CREATE TABLE sinhVien
 (
-	ma VARCHAR(10),
-	hoTen NVARCHAR(50),
-	sdt VARCHAR(15),
-	diaChi NVARCHAR(100),
-	gioiTinh BIT,
-	ngaySinh DATE
-
-	CONSTRAINT PM
-	PRIMARY KEY(ma,sdt)
+	ma INT IDENTITY,
+	ho_ten NVARCHAR(100),
+	diem_lan_1 FLOAT DEFAULT 5,
+	diem_lan_2 FLOAT,
+	CONSTRAINT PK_ma PRIMARY KEY(ma),
+	CONSTRAINT CK_gioi_han_diem CHECK(diem_lan_1 >= 0 AND diem_lan_1 <= 10 AND diem_lan_2 >= 0 AND diem_lan_2 <= 10),
+	-- để lại 2 câu * để làm với alter
 )
 
--- 1. Thêm 5 khách hàng
-INSERT INTO dbo.KhachHang -- 1
+--	- (*) điểm lần 2 không được nhập khi mà điểm lần 1 lớn hơn hoặc bằng 5
+ALTER TABLE dbo.sinhVien
+ADD CONSTRAINT CK_nhap_diem_lan_2 CHECK ((diem_lan_1 >= 5 AND diem_lan_2 IS NULL) OR diem_lan_1 < 5);
+
+--	- (**) tên không được phép ngắn hơn 2 ký tự
+ALTER TABLE dbo.sinhVien
+ADD CONSTRAINT CK_do_dai_ten CHECK (LEN(ho_ten) >= 2)
+
+
+--1. Điền 5 sinh viên kèm điểm
+INSERT INTO dbo.sinhVien
+(ho_ten, diem_lan_1, diem_lan_2)
 VALUES
-(   123,       -- ma - char(10)
-    N'Anh Kiệt',       -- hoTen - char(50)
-    '123',       -- sdt - char(15)
-    '123',       -- diaChi - char(100)
-    1,     -- gioiTinh - bit
-    '20030923' -- ngaySinh - date
-),
-(   234,       -- ma - char(10)
-    N'Anh Thi',       -- hoTen - char(50)
-    '234',       -- sdt - char(15)
-    '234',       -- diaChi - char(100)
-    0,     -- gioiTinh - bit
-    '20010117' -- ngaySinh - date
-),
-(   343,       -- ma - char(10)
-    N'Nam',       -- hoTen - char(50)
-    '343',       -- sdt - char(15)
-    '343',       -- diaChi - char(100)
-    1,     -- gioiTinh - bit
-    '19980117' -- ngaySinh - date
-),
-(   555,       -- ma - char(10)
-    N'Nguyễn Anh Long',       -- hoTen - char(50)
-    '555',       -- sdt - char(15)
-    '555',       -- diaChi - char(100)
-    1,     -- gioiTinh - bit
-    '19851123' -- ngaySinh - date
-),
-(   111,       -- ma - char(10)
-    N'Như',       -- hoTen - char(50)
-    '111',       -- sdt - char(15)
-    '111',       -- diaChi - char(100)
-    0,     -- gioiTinh - bit
-    '20030209' -- ngaySinh - date
-)
+(   N'Kiệt', 4, 1.6), (N'Như', 8, NULL), (N'Phát', 10, NULL), (N'Thiện', 2, 1), (N'Tuấn', 4, NULL);
 
--- 2. Hiển thị chỉ họ tên và số điện thoại của tất cả khách hàng 
-SELECT hoTen,sdt FROM  dbo.KhachHang
-GO
+--2. Lấy ra các bạn điểm lần 1 hoặc lần 2 lớn hơn 5
+SELECT * FROM dbo.sinhVien
+WHERE diem_lan_1 > 5 OR diem_lan_2 > 5
 
--- 3. Cập nhật khách có mã là 2 sang tên Tuấn
-UPDATE dbo.KhachHang SET hoTen = N'Tuấn' WHERE ma = '343'
+--3. Lấy ra các bạn qua môn ngay từ lần 1
+SELECT * FROM dbo.sinhVien
+WHERE diem_lan_1 >= 5
 
--- 4. Xoá khách hàng có mã lớn hơn 3 và giới tính là Nam
-DELETE dbo.KhachHang WHERE ma > 444 AND gioiTinh = 1
+--4. Lấy ra các bạn trượt môn (lần 1 và 2 đều dưới 5)
+SELECT * FROM dbo.sinhVien
+WHERE diem_lan_1 < 5 AND diem_lan_2 < 5
 
--- 5. (*) Lấy ra khách hàng sinh tháng 1
-SELECT * FROM dbo.KhachHang
-WHERE MONTH(ngaySinh) = 01
+--5. (*) Đếm số bạn qua môn sau khi thi lần 2
+SELECT COUNT(*) AS so_ban_qua_mon_sau_khi_thi_lan_2 FROM dbo.sinhVien
+WHERE diem_lan_2 >= 5
 
--- 6. (*) Lấy ra khách hàng có họ tên trong danh sách (Anh,Minh,Đức) và giới tính Nam hoặc chỉ cần năm sinh trước 2000
-SELECT * FROM dbo.KhachHang
-WHERE hoTen LIKE N'%Anh%' AND gioiTinh = 1 OR YEAR(ngaySinh) < 2000
-
--- 7. (**) Lấy ra khách hàng có tuổi lớn hơn 18
-SELECT * FROM dbo.KhachHang
-WHERE YEAR(GETDATE()) - YEAR(ngaySinh) > 18
-
--- 8. (**) Lấy ra 3 khách hàng mới nhất
-SELECT TOP 3 * FROM KhachHang
-ORDER BY ma DESC
-
--- 9. (**) Lấy ra khách hàng có tên chứa chữ T
-SELECT * FROM dbo.KhachHang
-WHERE hoTen LIKE N'%T%'
-
--- 10. (***) Thay đổi bảng sao cho chỉ nhập được ngày sinh bé hơn ngày hiện tại
-ALTER TABLE KhachHang
-ADD CHECK(ngaySinh < GETDATE()) -- check() -> độc lập với cột
-
--- (***) Thay đổi bảng sao cho chỉ nhập được giới tính nam với bạn tên Kiệt hoặc khác tên Kiệt
-ALTER TABLE KhachHang
-ADD CONSTRAINT CK_gioi_tinh_kem_ten_kiet CHECK((gioiTinh = 1 AND hoTen = N'Kiệt') OR hoTen != N'Kiệt')
+--6. (**) Đếm số bạn cần phải thi lần 2 (tức là thi lần 1 chưa qua nhưng chưa nhập điểm lần 2)
+SELECT COUNT(*) as so_ban_can_phai_thi_lan_2 FROM dbo.sinhVien
+WHERE diem_lan_1 < 5 AND diem_lan_2 IS NULL
