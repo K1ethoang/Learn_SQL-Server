@@ -27,7 +27,7 @@ VALUES
     '123',       -- sdt - char(15)
     '123',       -- diaChi - char(100)
     1,     -- gioiTinh - bit
-    '20030923' -- ngaySinh - date
+    '20010209' -- ngaySinh - date
 ),
 (   234,       -- ma - char(10)
     N'Anh Thi',       -- hoTen - char(50)
@@ -55,7 +55,7 @@ VALUES
     '111',       -- sdt - char(15)
     '111',       -- diaChi - char(100)
     0,     -- gioiTinh - bit
-    '20030209' -- ngaySinh - date
+    '20030923' -- ngaySinh - date
 )
 
 -- 2. Hiển thị chỉ họ tên và số điện thoại của tất cả khách hàng 
