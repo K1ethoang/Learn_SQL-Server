@@ -53,3 +53,17 @@ WHERE diem_lan_2 >= 5
 --6. (**) Đếm số bạn cần phải thi lần 2 (tức là thi lần 1 chưa qua nhưng chưa nhập điểm lần 2)
 SELECT COUNT(*) as so_ban_can_phai_thi_lan_2 FROM dbo.sinhVien
 WHERE diem_lan_1 < 5 AND diem_lan_2 IS NULL
+---------------------------------------------------------------------------------
+-- bonus kiến thức
+
+-- thêm 1 bạn có tên trùng
+INSERT INTO dbo.sinhVien
+(ho_ten, diem_lan_1, diem_lan_2)
+VALUES 
+(N'Kiệt', 10, NULL)
+
+-- chạy 2 select sau bạn sẽ hiểu
+SELECT ho_ten FROM dbo.sinhVien
+
+-- DISTINCT -> lọc trùng
+SELECT DISTINCT ho_ten FROM dbo.sinhVien
