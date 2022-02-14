@@ -90,8 +90,9 @@ ORDER BY ngay_vao_lam ASC
 
 ----------------------------------------------------------------------------------------
 -- bonus kiến thức
--- datediff()
+-- DATEDIFF()
 -- CAST(GETDATE() AS DATE)
+-- OFFSET
 
 -- đừng chú ý
 TRUNCATE TABLE dbo.nhan_vien
