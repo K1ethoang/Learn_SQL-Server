@@ -15,4 +15,4 @@ Tạo bảng lưu thông tin khách hàng (mã, họ tên, số điện thoại,
 ```
 <br>
 
-[Lời giải](https://github.com/K1ethoang/SQL-Server/blob/main/B%C3%A0i%20t%E1%BA%ADp/DML/buoi2/buoi2.sql)
+[Lời giải](bài%201.sql)

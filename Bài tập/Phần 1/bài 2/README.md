@@ -15,4 +15,4 @@
 6. (**) Đếm số bạn cần phải thi lần 2 (tức là thi lần 1 chưa qua nhưng chưa nhập điểm lần 2)
 ```
 
-[Lời giải](buoi3.sql)
+[Lời giải](bài%202.sql)
