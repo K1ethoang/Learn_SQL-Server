@@ -93,7 +93,7 @@ CREATE TABLE dong_vat
 	CONSTRAINT CK_ten CHECK (LEN(ten) > 1),
 	CONSTRAINT CK_so_chan CHECK (so_chan >= 0 AND so_chan < 100 AND so_chan % 2 = 0),
 	CONSTRAINT CK_tuoi_tho CHECK (tuoi_tho > 0),
-	FOREIGN KEY (ma_moi_truong_song) REFERENCES dbo.moi_truong_song,
+	FOREIGN KEY (ma_moi_truong_song) REFERENCES dbo.moi_truong_song (ma)
 )
 
 INSERT INTO dbo.dong_vat

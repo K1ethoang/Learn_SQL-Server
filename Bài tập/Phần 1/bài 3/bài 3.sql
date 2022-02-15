@@ -64,6 +64,7 @@ SELECT SUM(luong) AS 'tong_tien_phai_tra' FROM dbo.nhan_vien
 SELECT nghe_nghiep, SUM(luong) AS 'tong_tien_phai_tra' FROM dbo.nhan_vien
 GROUP BY nghe_nghiep
 
+
 --5. Lấy ra trung bình lương nhân viên.
 SELECT AVG(luong) AS 'trung_binh_luong_nhan_vien' FROM dbo.nhan_vien
 --5.1. (*: theo từng nghề)
@@ -85,8 +86,49 @@ ORDER BY ngay_vao_lam ASC
 
 --8. (**) Tách những thông tin trên thành nhiều bảng cho dễ quản lý, lương 1 nhân viên có thể nhập nhiều lần
 
+CREATE TABLE nghe_nghiep
+(
+	ma INT IDENTITY,
+	ten NVARCHAR(100) NOT NULL
 
+	CONSTRAINT PK_ma PRIMARY KEY(ma)
+)
 
+INSERT INTO dbo.nghe_nghiep (ten)
+VALUES
+(N'IT'),
+(N'kế toán'),
+(N'doanh nhân thành đạt')
+
+SELECT * FROM dbo.nghe_nghiep
+
+DROP TABLE dbo.nhan_vien
+
+CREATE TABLE nhan_vien
+(
+	ma INT IDENTITY,
+	luong INT NOT NULL,
+	ho_ten NVARCHAR(100) NOT NULL,
+	ngay_sinh DATE NOT NULL,
+	gioi_tinh BIT DEFAULT 0 NOT NULL,
+	ngay_vao_lam DATE DEFAULT GETDATE() NOT NULL,
+	ma_nghe_nghiep int NOT NULL,
+
+	CONSTRAINT PK_ma_nhan_vien PRIMARY KEY (ma),
+	CONSTRAINT CK_luong_nguyen_duong CHECK (luong >= 0),
+	CONSTRAINT CK_do_dai_ten CHECK (LEN(ho_ten) >= 2),
+	CONSTRAINT CK_tuoi CHECK (YEAR(GETDATE()) - YEAR(ngay_sinh) > 18),
+	FOREIGN KEY (ma_nghe_nghiep) REFERENCES dbo.nghe_nghiep (ma)
+)
+
+INSERT INTO dbo.nhan_vien
+(luong, ho_ten, ngay_sinh, gioi_tinh, ngay_vao_lam, ma_nghe_nghiep)
+VALUES
+(58, N'Kiệt', '2001-02-09', 1, '2022-03-01', 1),
+(90, N'Như', '2003-09-23', 0, '2021-12-20', 1),
+(67, N'Lân', '2000-02-14', 1, DEFAULT, 3)
+
+SELECT * FROM dbo.nhan_vien
 
 ----------------------------------------------------------------------------------------
 -- bonus kiến thức
