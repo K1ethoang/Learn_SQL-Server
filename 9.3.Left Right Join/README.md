@@ -10,7 +10,6 @@
 ||Hình 1|Hình 2|
 |:--:|:---:|:---:|
 |Left|![Left Outer Join](https://github.com/K1ethoang/SQL-Server/blob/main/9.3.Left%20Right%20Join/image/sql-left-outer-join1.png)|![Left Outer Join](https://github.com/K1ethoang/SQL-Server/blob/main/9.3.Left%20Right%20Join/image/sql-left-outer-join2.png)|
-|Right|![Right Outer Join](https://github.com/K1ethoang/SQL-Server/blob/main/9.3.Left%20Right%20Join/image/sql-right-outer-join1.png)|![Right Outer Join](https://github.com/K1ethoang/SQL-Server/blob/main/9.3.Left%20Right%20Join/image/sql-right-outer-join2.png)|
 
 
 # 2. Right Outer Join
@@ -24,7 +23,6 @@
 
 ||Hình 1|Hình 2|
 |:--:|:---:|:---:|
-|Left|![Left Outer Join](https://github.com/K1ethoang/SQL-Server/blob/main/9.3.Left%20Right%20Join/image/sql-left-outer-join1.png)|![Left Outer Join](https://github.com/K1ethoang/SQL-Server/blob/main/9.3.Left%20Right%20Join/image/sql-left-outer-join2.png)|
 |Right|![Right Outer Join](https://github.com/K1ethoang/SQL-Server/blob/main/9.3.Left%20Right%20Join/image/sql-right-outer-join1.png)|![Right Outer Join](https://github.com/K1ethoang/SQL-Server/blob/main/9.3.Left%20Right%20Join/image/sql-right-outer-join2.png)|
 
 
